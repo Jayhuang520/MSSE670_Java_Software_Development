@@ -12,7 +12,7 @@ import org.junit.Test;
  * @author JayHu
  *
  */
-public class CustomerTest1 {
+public class CustomerTest {
 	
 	private static Customer cus1,cus2;
 
