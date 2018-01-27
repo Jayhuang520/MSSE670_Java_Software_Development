@@ -20,7 +20,10 @@ public class Hotel implements Serializable{
 	/**room type*/
 	private Room room;
 	
+	/** city */
+	private City city;
 	
+
 	
 	/**
 	 * @return Returns the rate.
@@ -41,16 +44,77 @@ public class Hotel implements Serializable{
 		this.room = room;
 	}
 
+	/**
+	 * 
+	 * @param rate
+	 * @param room
+	 */
 	public Hotel(float rate,Room room) {
 		super();
 		this.rate = rate;
 		this.room = room;
 	}
 	
-	public boolean validate() {
-		if (rate == 0.0) return false;
-		if (room == null) return false;
+	/**
+	 * 
+	 * @param rate
+	 * @param room
+	 * @param city
+	 */
+	public Hotel(float rate,Room room,City city) {
+		super();
+		this.rate = rate;
+		this.room = room;
+		this.city = city;
+	}
+
+	public City getCity() {
+		return city;
+	}
+
+	public void setCity(City city) {
+		this.city = city;
+	}
+	
+	public boolean validate () 
+	{
+		if(rate == 0.0) return false;
+		if(room == null) return false;
+		if(city == null) return false;
+		return true;
+	}
+	
+	/**
+	 * 
+	 * @param hotel
+	 * @return
+	 */
+	public boolean equals(Hotel hotel) 
+	{
+		if(rate != hotel.rate) return false;
+		if(room != hotel.room) return false;
+		if(city != hotel.city) return false;
 		
 		return true;
 	}
-}
+	
+	/**
+	 *  toString method useful for logging
+	 *  
+	 */
+	public String toString() 
+	{
+		StringBuffer strBuf = new StringBuffer();
+		strBuf.append("Rate: ");
+		strBuf.append(rate+"\n");
+		strBuf.append("Room type is:");
+		strBuf.append(room + "\n");
+		strBuf.append("In City:");
+		strBuf.append(city + "\n");
+		
+		return strBuf.toString();
+	}
+	
+	
+}//end of Hotel
+

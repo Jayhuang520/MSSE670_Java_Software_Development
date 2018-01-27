@@ -35,6 +35,29 @@ public class Customer implements Serializable {
 	private String phoneNumber;
 	
 	private String ID;
+	
+	/**
+	 * 
+	 * @param lastName
+	 * @param firstName
+	 * @param userName
+	 * @param passWord
+	 * @param address
+	 * @param phoneNumber
+	 * @param ID
+	 */
+	public Customer(String lastName,String firstName,String userName,
+			String password, String address, String phoneNumber,
+			String ID) 
+	{
+		this.lastName = lastName;
+		this.firstName = firstName;
+		this.userName = userName;
+		this.password = password;
+		this.address = address;
+		this.phoneNumber = phoneNumber;
+		this.ID = ID;
+	}
 
 	public String getLastName() {
 		return lastName;
