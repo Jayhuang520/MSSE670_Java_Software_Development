@@ -46,4 +46,11 @@ public class Hotel implements Serializable{
 		this.rate = rate;
 		this.room = room;
 	}
+	
+	public boolean validate() {
+		if (rate == 0.0) return false;
+		if (room == null) return false;
+		
+		return true;
+	}
 }

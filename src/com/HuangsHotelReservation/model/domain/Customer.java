@@ -1,6 +1,8 @@
 package com.HuangsHotelReservation.model.domain;
 import java.io.Serializable;
 
+import org.omg.CORBA.Object;
+
 /**
  * 
  * @author Jay Huang
@@ -89,6 +91,88 @@ public class Customer implements Serializable {
 	public void setID(String iD) {
 		ID = iD;
 	}
+	
+	public boolean validate() {
+		if(lastName == null) return false;
+		if(firstName == null) return false;
+		if(userName == null) return false;
+		if(password == null) return false;
+		if(address == null) return false;
+		if(phoneNumber == null) return false;
+		
+		return true;
+	}
+	
+	public boolean equals(Object obj) {
+		if(this == obj) return false;
+		if(obj == null) return false;
+		if(getClass() != obj.getClass())
+			return false;
+		Customer other = (Customer) obj;
+		if (lastName == null) {
+			if (other.lastName != null)
+				return false;
+		} else if (!lastName.equals(other.lastName))
+			return false;
+		if (firstName == null) {
+			if (other.firstName != null)
+				return false;
+		} else if (!firstName.equals(other.firstName))
+			return false;
+		if (userName == null) {
+			if (other.userName != null)
+				return false;
+		} else if (!userName.equals(other.userName))
+			return false;
+		if (password == null) {
+			if (other.password != null)
+				return false;
+		} else if (!password.equals(other.password))
+			return false;
+		if (address == null) {
+			if (other.address != null)
+				return false;
+		} else if (!address.equals(other.address))
+			return false;
+		if (phoneNumber == null) {
+			if (other.phoneNumber != null)
+				return false;
+		} else if (!phoneNumber.equals(other.phoneNumber))
+			return false;
+		return false;
+	}
+	
+	@Override
+	public String toString() {
+		
+		String returnString;
+		returnString="Customer name: "+lastName+","+firstName+"\n"
+				+"User name: "+ userName
+				+"\npassword: "+password
+				+"\nAddress: " +address 
+				+"\nphone number"+phoneNumber;
+		return returnString;
+	}
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		
+		result = prime * result + ((address == null) ? 0 : address.hashCode());
+		result = prime * result
+				+ ((userName == null) ? 0 : userName.hashCode());
+		result = prime * result
+				+ ((firstName == null) ? 0 : firstName.hashCode());
+		result = prime * result
+				+ ((lastName == null) ? 0 : lastName.hashCode());
+		result = prime * result
+				+ ((password == null) ? 0 : password.hashCode());
+		result = prime * result
+				+ ((phoneNumber == null) ? 0 : phoneNumber.hashCode());
+		return result;
+	}
+	
 	
 	public static void main(String[] args) {
 		
