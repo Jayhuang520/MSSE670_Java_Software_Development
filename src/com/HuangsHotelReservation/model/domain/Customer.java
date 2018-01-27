@@ -116,12 +116,20 @@ public class Customer implements Serializable {
 	}
 	
 	public boolean validate() {
-		if(lastName == null) return false;
-		if(firstName == null) return false;
-		if(userName == null) return false;
-		if(password == null) return false;
-		if(address == null) return false;
-		if(phoneNumber == null) return false;
+		if(lastName == null) 
+			return false;
+		if(firstName == null) 
+			return false;
+		if(userName == null) 
+			return false;
+		if(password == null) 
+			return false;
+		if(address == null) 
+			return false;
+		if(phoneNumber == null) 
+			return false;
+		if(ID == null) 
+			return false;
 		
 		return true;
 	}

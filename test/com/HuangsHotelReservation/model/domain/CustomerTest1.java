@@ -4,16 +4,15 @@
 package com.HuangsHotelReservation.model.domain;
 
 import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 /**
  * @author JayHu
  *
  */
-class CustomerTest {
+public class CustomerTest1 {
 	
 	private static Customer cus1,cus2;
 
@@ -21,7 +20,7 @@ class CustomerTest {
 	 * @throws java.lang.Exception
 	 */
 	@Before
-	static void setUp() throws Exception {
+	public void setUp() throws Exception {
 		
 		cus1 = new Customer("Alexander","John","JAlexander",
 				"password", "email@harris.com", "123-456-7890",
@@ -36,7 +35,7 @@ class CustomerTest {
 	 * {@link com.HuangsHotelReservation.model.domain.Customer#validate()}}.
 	 */
 	@Test
-	void testValidateCustomer() {
+	public void testValidateCustomer() {
 		System.out.println("Start the testValidateCustomer: ");
 		/*
 		 * validate method from cus1 should assert to true because
