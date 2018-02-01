@@ -14,7 +14,7 @@ import org.junit.Test;
  */
 public class CustomerTest {
 	
-	private static Customer cus1,cus2;
+	private Customer cus1,cus2,cus3;
 
 	/**
 	 * @throws java.lang.Exception
@@ -26,6 +26,9 @@ public class CustomerTest {
 				"password", "email@harris.com", "123-456-7890",
 				"10-111-0000");
 		cus2 = new Customer("Huang","Jay","JHuang",
+				"password", "email@harris.com", "103-456-7890",
+				"10-111-2222");
+		cus3 = new Customer("Huang","Jay","JHuang",
 				"password", "email@harris.com", "103-456-7890",
 				"10-111-2222");
 	}
@@ -43,6 +46,13 @@ public class CustomerTest {
 		 */
 		assertTrue(cus1.validate());
 		System.out.println("testValidateCustomer PASSED!!!!");
+	}
+	
+	@Test
+	public void testEqualCustomer() {
+		System.out.println("Start the testEqualCustomer: ");
+		assertTrue(cus2.equals(cus3));
+		System.out.println("testEqualCustomer has PASSED!!!");
 	}
 
 }

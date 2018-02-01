@@ -1,7 +1,6 @@
 package com.HuangsHotelReservation.model.domain;
 import java.io.Serializable;
 
-import org.omg.CORBA.Object;
 
 /**
  * 
@@ -134,6 +133,7 @@ public class Customer implements Serializable {
 		return true;
 	}
 	
+	@Override
 	public boolean equals(Object obj) {
 		if(this == obj) return false;
 		if(obj == null) return false;
@@ -170,7 +170,7 @@ public class Customer implements Serializable {
 				return false;
 		} else if (!phoneNumber.equals(other.phoneNumber))
 			return false;
-		return false;
+		return true;
 	}
 	
 	@Override

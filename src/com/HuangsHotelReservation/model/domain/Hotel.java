@@ -43,6 +43,10 @@ public class Hotel implements Serializable{
 	public void setRoom(Room room) {
 		this.room = room;
 	}
+	
+	public Hotel() {
+		//Does nothing now
+	}
 
 	/**
 	 * 
