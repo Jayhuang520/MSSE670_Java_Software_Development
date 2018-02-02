@@ -5,15 +5,17 @@ import com.HuangsHotelReservation.model.domain.Room;
 
 public class seeGalleryServiceImpl implements IseeGalleryService{
 	
-	public void RetrievePicture(Room room) {
+	public boolean RetrievePicture(Room room) {
 		System.out.println("Entering method seeGallerySerivceImpl::"
 				+ "Customer will be able to view pictures of the"
 				+ "hotel room!!!");
+		return true;
 	}
 	
-	public void RetrieveRoom(City city) {
+	public boolean RetrieveRoom(City city) {
 		System.out.println("Entering method seeGallerySerivceImpl::"
 				+ "Customer will be able to retrieve room based on the"
 				+ "city");
+		return true;
 	}
 }

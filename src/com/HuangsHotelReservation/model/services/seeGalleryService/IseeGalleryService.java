@@ -6,10 +6,10 @@ public interface IseeGalleryService {
 	/*
 	 * Declaration of retrievePicture
 	 */
-	public void RetrievePicture(Room room);
+	public boolean RetrievePicture(Room room);
 	
 	/*
 	 * Declaration of RetreiveRoom
 	 */
-	public void RetrieveRoom(City city);
+	public boolean RetrieveRoom(City city);
 }

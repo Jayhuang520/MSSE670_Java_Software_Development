@@ -3,7 +3,7 @@ package com.HuangsHotelReservation.model.services.calendarservice;
 import com.HuangsHotelReservation.model.domain.City;
 import com.HuangsHotelReservation.model.domain.Room;
 
-public class CalendarServiceImpl {
+public class CalendarServiceImpl implements ICalendarService{
 	public void RetrieveAvaliableRoom(City city,Room room) 
 	{
 		System.out.println("Entering method CalendarSerivceImpl::"
