@@ -204,8 +204,4 @@ public class Customer implements Serializable {
 		return result;
 	}
 	
-	
-	public static void main(String[] args) {
-		
-	}
 }
