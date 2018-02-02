@@ -4,10 +4,11 @@ import com.HuangsHotelReservation.model.domain.City;
 import com.HuangsHotelReservation.model.domain.Room;
 
 public class CalendarServiceImpl implements ICalendarService{
-	public void RetrieveAvaliableRoom(City city,Room room) 
+	public boolean RetrieveAvaliableRoom(City city,Room room) 
 	{
 		System.out.println("Entering method CalendarSerivceImpl::"
 				+ "Customer will be able to retrieve  available room "
 				+ "based on the city and room input!");
+		return true;
 	}
 }

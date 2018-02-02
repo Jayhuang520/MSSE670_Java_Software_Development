@@ -4,5 +4,5 @@ import com.HuangsHotelReservation.model.domain.City;
 import com.HuangsHotelReservation.model.domain.Room;
 
 public interface ICalendarService {
-	public void RetrieveAvaliableRoom(City city,Room room);
+	public boolean RetrieveAvaliableRoom(City city,Room room);
 }
