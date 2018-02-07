@@ -1,5 +1,8 @@
 package com.HuangsHotelReservation.model.services.seeGalleryService;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 import com.HuangsHotelReservation.model.domain.City;
 import com.HuangsHotelReservation.model.domain.Room;
 import com.HuangsHotelReservation.model.services.IService;
@@ -13,5 +16,5 @@ public interface IseeGalleryService extends IService{
 	/*
 	 * Declaration of RetreiveRoom
 	 */
-	public boolean RetrieveRoom(City city);
+	public boolean RetrieveRoom(City city) throws FileNotFoundException, IOException;
 }

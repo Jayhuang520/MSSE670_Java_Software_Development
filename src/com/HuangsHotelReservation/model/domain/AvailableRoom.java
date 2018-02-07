@@ -91,12 +91,26 @@ public class AvailableRoom implements Serializable{
 
 	/**
 	 * 
+	 * @param room
+	 */
+	public void addRoom(Room room) {
+		availableRoomList.add(room);
+	}
+	
+	/**
+	 * 
 	 * @param availableRoomList
 	 */
 	public void setAvailableRoomList(ArrayList<Room> availableRoomList) {
 		this.availableRoomList = availableRoomList;
 	}
-
+	
+	/**
+	 * Add each available room into the ArrayList
+	 * @param room
+	 * 
+	 */
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
