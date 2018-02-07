@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import com.HuangsHotelReservation.model.services.calendarservice.CalendarServiceImpl;
 import com.HuangsHotelReservation.model.services.calendarservice.ICalendarService;
+import com.HuangsHotelReservation.model.services.factory.ServiceFactory;
 import com.HuangsHotelReservation.model.services.seeGalleryService.IseeGalleryService;
 import com.HuangsHotelReservation.model.services.seeGalleryService.seeGalleryServiceImpl;
 

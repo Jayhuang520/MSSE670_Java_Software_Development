@@ -5,8 +5,8 @@ import org.junit.Test;
 import com.HuangsHotelReservation.model.domain.City;
 import com.HuangsHotelReservation.model.domain.Hotel;
 import com.HuangsHotelReservation.model.domain.Room;
-import com.HuangsHotelReservation.model.service.factory.ServiceFactory;
 import com.HuangsHotelReservation.model.services.calendarservice.ICalendarService;
+import com.HuangsHotelReservation.model.services.factory.ServiceFactory;
 
 import junit.framework.TestCase;
 

@@ -1,4 +1,4 @@
-package com.HuangsHotelReservation.model.service.factory;
+package com.HuangsHotelReservation.model.services.factory;
 
 import com.HuangsHotelReservation.model.services.calendarservice.CalendarServiceImpl;
 import com.HuangsHotelReservation.model.services.calendarservice.ICalendarService;
