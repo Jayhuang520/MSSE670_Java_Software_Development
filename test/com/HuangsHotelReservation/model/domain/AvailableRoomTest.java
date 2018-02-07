@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 class AvailableRoomTest {
 
 	/**
-	 * @author JayHu
+	 * @author Jay Huang
 	 */
 	private AvailableRoom avaRoom1,avaRoom2;
 	
