@@ -10,7 +10,6 @@ package com.HuangsHotelReservation.model.services;
  * Underlying implementation changes doesn't affect calling
  * classes.
  */
-
-public class IService {
+public interface IService {
 
 }//end class IService

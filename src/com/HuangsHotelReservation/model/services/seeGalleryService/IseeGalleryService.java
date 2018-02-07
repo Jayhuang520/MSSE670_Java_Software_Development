@@ -1,8 +1,10 @@
 package com.HuangsHotelReservation.model.services.seeGalleryService;
 
-import com.HuangsHotelReservation.model.domain.*;
+import com.HuangsHotelReservation.model.domain.City;
+import com.HuangsHotelReservation.model.domain.Room;
+import com.HuangsHotelReservation.model.services.IService;
 
-public interface IseeGalleryService {
+public interface IseeGalleryService extends IService{
 	/*
 	 * Declaration of retrievePicture
 	 */
