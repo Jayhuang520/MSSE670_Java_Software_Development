@@ -13,8 +13,7 @@ import com.HuangsHotelReservation.model.services.exception.CalendarException;
  */
 public class CalendarServiceImpl implements ICalendarService{
 	
-	public boolean RetrieveAvaliableRoom(City city,Room room,int month,int day,
-			int year) 
+	public boolean RetrieveAvaliableRoom(City city,Room room) 
 					throws CalendarException
 	{
 		boolean isValid = false;
@@ -23,15 +22,6 @@ public class CalendarServiceImpl implements ICalendarService{
 				+ "based on the city and room input!");
 		ObjectInputStream input = null;
 		
-		try {
-			/*
-			 * The avaliable room will be the input of the service
-			 * and the print out will be the output of the service
-			 */
-			
-		}catch(CalendarException e){
-			isValid = true;
-		}
 		return isValid;
 		
 	}

@@ -1,20 +1,22 @@
 package com.HuangsHotelReservation.model.services.seeGalleryService;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import com.HuangsHotelReservation.model.domain.City;
 import com.HuangsHotelReservation.model.domain.Room;
 import com.HuangsHotelReservation.model.services.IService;
+import com.HuangsHotelReservation.model.services.exception.SeeGalleryException;
 
 public interface IseeGalleryService extends IService{
 	/*
 	 * Declaration of retrievePicture
 	 */
-	public boolean RetrievePicture(Room room);
+	public boolean RetrievePicture(ArrayList<?> availableRoomList);
 	
 	/*
 	 * Declaration of RetreiveRoom
 	 */
-	public boolean RetrieveRoom(City city) throws FileNotFoundException, IOException;
+	public ArrayList<Room> RetrieveRoom(City city) 
+			throws IOException, SeeGalleryException;
 }

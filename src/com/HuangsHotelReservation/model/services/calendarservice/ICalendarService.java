@@ -6,7 +6,5 @@ import com.HuangsHotelReservation.model.services.IService;
 import com.HuangsHotelReservation.model.services.exception.CalendarException;
 
 public interface ICalendarService extends IService{
-	public boolean RetrieveAvaliableRoom(City city,Room room,int month,int day,
-			int year) 
-			throws CalendarException;
+	public boolean RetrieveAvaliableRoom(City city,Room room) throws CalendarException;
 }
