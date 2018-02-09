@@ -9,6 +9,9 @@ import com.HuangsHotelReservation.model.services.IService;
 import com.HuangsHotelReservation.model.services.exception.SeeGalleryException;
 
 public interface IseeGalleryService extends IService{
+	
+	public final String NAME = "IseeGalleryService";
+	
 	/*
 	 * Declaration of retrievePicture
 	 */
