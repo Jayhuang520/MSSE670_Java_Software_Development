@@ -22,8 +22,8 @@ public class ServiceFactoryTest {
 	}
 	
 	/**
-	 * Test factory to return seeGalleryService and assert it by checking\
-	 * is it an instance of seeGallerySerivceImpl
+	 * Test factory to return the seeGalleryService and assert it by
+	 * checking it is an instance of seeGalleryService.
 	 */
 	@Test
 	public void testGetSeeGallerySerivce() {
@@ -37,6 +37,7 @@ public class ServiceFactoryTest {
 			sle.printStackTrace();
 			fail("ServiceLoadException");
 		}
+
 	}
 	
 	@Test
