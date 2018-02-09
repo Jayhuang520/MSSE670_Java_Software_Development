@@ -15,11 +15,11 @@ public interface IseeGalleryService extends IService{
 	/*
 	 * Declaration of retrievePicture
 	 */
-	public boolean RetrievePicture(ArrayList<?> availableRoomList);
+	public boolean RetrievePicture(ArrayList<Room> availableRoomList);
 	
 	/*
 	 * Declaration of RetreiveRoom
 	 */
-	public ArrayList<Room> RetrieveRoom(City city) 
+	public boolean RetrieveRoom(City city) 
 			throws IOException, SeeGalleryException;
 }

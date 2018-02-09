@@ -11,5 +11,4 @@ package com.HuangsHotelReservation.model.services;
  * classes.
  */
 public interface IService {
-
 }//end class IService

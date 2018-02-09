@@ -39,7 +39,7 @@ public class ServiceFactory
 			Class<?> c = Class.forName(getImplName(serviceName));
 			return (IService) c.newInstance();
 		}catch(Exception e) {
-			String errorMessage = serviceName + "not loaded";
+			String errorMessage = serviceName + " not loaded";
 			throw new ServiceLoadException(errorMessage,e);
 		}
 	}
@@ -61,6 +61,6 @@ public class ServiceFactory
 		prop.load(fis);
 		fis.close();
 		
-		return prop.getProperty(propertyFileLoc);
+		return prop.getProperty(serviceName);
 	}
 }//end Service Factory

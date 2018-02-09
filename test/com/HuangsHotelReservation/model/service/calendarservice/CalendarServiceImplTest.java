@@ -33,10 +33,8 @@ public class CalendarServiceImplTest extends TestCase{
 	@Test
 	public final void testRetrieveAvaliableRoom() throws CalendarException {
 		
-		ICalendarService calendarService;
-		
-		City city = hotel.getCity();
-		Room room = hotel.getRoom();
+		//City city = hotel.getCity();
+		//Room room = hotel.getRoom();
 		//assertTrue(calendarService.RetrieveAvaliableRoom(city, room));
 		System.out.println("testRetrieveAvaliableRoom PASSED");
 	}
