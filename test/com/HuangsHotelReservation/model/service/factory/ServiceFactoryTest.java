@@ -16,11 +16,20 @@ public class ServiceFactoryTest {
 	
 	@Before
 	public void setUp() throws Exception{
-		serviceFactory = new ServiceFactory();
+		serviceFactory = ServiceFactory.getInstance();
 	}
 	
+	/**
+	 * Test factory to return the seeGalleryService and assert it by
+	 * checking it is an instance of seeGalleryService.
+	 */
 	@Test
 	public void testGetSeeGallerySerivce() {
+		IseeGalleryService seeGalleryService;
+		try {
+			seeGalleryService = (IseeGalleryService)serviceFactory.getService(IseeGalleryService)
+		}
+		
 		IseeGalleryService seeGalleryService = (IseeGalleryService)serviceFactory.getSeeGallerySerivce();
 		assertTrue(seeGalleryService instanceof seeGalleryServiceImpl);
 	}
