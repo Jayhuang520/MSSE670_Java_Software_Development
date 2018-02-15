@@ -1,7 +1,7 @@
-package com.HuangsHotelReservation.model.business.exception.manager;
+package com.HuangsHotelReservation.model.business.manager;
 
 import com.HuangsHotelReservation.model.business.exception.PropertyFileNotFoundException;
-import com.sun.org.apache.xerces.internal.impl.PropertyManager;
+import com.HuangsHotelReservation.model.services.manager.PropertyManager;
 
 public abstract class ManagerSuperType {
 
@@ -22,7 +22,6 @@ public abstract class ManagerSuperType {
 		}
 
 	public static void loadProperties() throws PropertyFileNotFoundException{
-		// TODO Auto-generated method stub
 		String propertyFileLocation = System.getProperty("propLocation");
 		if(propertyFileLocation != null) {
 			//Now we have successfully loaded the property file,
@@ -30,8 +29,10 @@ public abstract class ManagerSuperType {
 			PropertyManager.loadProperties(propertyFileLocation);
 		}else {
 			System.out.println("Property file location not set.\n"
-					+ "Passed in value is "propertyFileLocation + ".");
+					+ "Passed in value is "+ propertyFileLocation + ".");
+			throw new PropertyFileNotFoundException("Property file locaiton"
+					+ "not set",null);
 		}
-	}
+	}// end loadProperties
 	
 }
