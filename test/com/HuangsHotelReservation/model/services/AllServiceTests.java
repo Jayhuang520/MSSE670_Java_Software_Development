@@ -11,6 +11,6 @@ import com.HuangsHotelReservation.model.service.seeGalleryService.seeGalleryServ
 @RunWith(Suite.class)
 @SuiteClasses({ServiceFactoryTest.class,CalendarServiceImplTest.class,
 	seeGalleryServiceImplTest.class})
-public class AllTests {
+public class AllServiceTests {
 
 }

@@ -1,11 +1,11 @@
 package com.HuangsHotelReservation.model.domain;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
-class AvailableRoomTest {
+import junit.framework.TestCase;
+
+class AvailableRoomTest extends TestCase{
 
 	/**
 	 * @author Jay Huang

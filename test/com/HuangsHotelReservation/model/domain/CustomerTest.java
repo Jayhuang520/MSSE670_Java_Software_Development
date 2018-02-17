@@ -3,16 +3,16 @@
  */
 package com.HuangsHotelReservation.model.domain;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import junit.framework.TestCase;
 
 /**
  * @author Jay Huang
  *
  */
-public class CustomerTest {
+public class CustomerTest extends TestCase{
 	
 	private Customer cus1,cus2,cus3;
 

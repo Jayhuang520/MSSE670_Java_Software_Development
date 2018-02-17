@@ -1,14 +1,10 @@
 package com.HuangsHotelReservation.model.domain;
 
-import static org.junit.Assert.assertTrue;
-
-import static org.junit.Assert.assertFalse;
 import org.junit.jupiter.api.Test;
 
-import com.HuangsHotelReservation.model.domain.Room;
-import com.HuangsHotelReservation.model.domain.City;
+import junit.framework.TestCase;
 
-class HotelTest {
+class HotelTest extends TestCase{
 
 	/**
 	 * assume with a valid room passed in
