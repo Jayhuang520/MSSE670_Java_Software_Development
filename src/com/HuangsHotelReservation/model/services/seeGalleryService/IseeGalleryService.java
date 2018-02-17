@@ -15,7 +15,7 @@ public interface IseeGalleryService extends IService{
 	/*
 	 * Declaration of retrievePicture
 	 */
-	public boolean RetrievePicture(ArrayList<Room> availableRoomList);
+	public boolean RetrievePicture(ArrayList<Room> availableRoomList) throws SeeGalleryException;
 	
 	/*
 	 * Declaration of RetreiveRoom

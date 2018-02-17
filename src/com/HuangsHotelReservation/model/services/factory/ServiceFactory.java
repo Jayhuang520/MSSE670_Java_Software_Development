@@ -1,9 +1,8 @@
 package com.HuangsHotelReservation.model.services.factory;
 
-import java.io.IOException;
-
 import com.HuangsHotelReservation.model.business.exception.ServiceLoadException;
 import com.HuangsHotelReservation.model.services.IService;
+import com.HuangsHotelReservation.model.services.manager.PropertyManager;
 
 /**
  * 
@@ -44,13 +43,14 @@ public class ServiceFactory
 		}
 	}
 
+	/* More robust way to take the property file is to
+	*  use -D option in eclipse to load the property file.
+	*  So the operator can pass in the above -D option with the java command.
+	*/
+	
+	/* Using alternative way to load property file through property manager file
 	private String getImplName(String serviceName) throws IOException {
 		java.util.Properties prop = new java.util.Properties();
-		
-		/* More robust way to take the property file is to
-		*  use -D option in eclipse to load the property file.
-		*  So the operator can pass in the above -D option with the java command.
-		*/
 		
 		String propertyFileLoc = System.getProperty("propLocation");
 		
@@ -63,4 +63,10 @@ public class ServiceFactory
 		
 		return prop.getProperty(serviceName);
 	}
+	*/
+	
+	private String getImplName(String serviceName) throws Exception{
+		return PropertyManager.getPropertyValue(serviceName);
+	}
+	
 }//end Service Factory

@@ -31,7 +31,7 @@ public class seeGalleryServiceImplTest extends TestCase{
 	}
 	
 	@Test
-	public final void testRetrievePicture() {
+	public final void testRetrievePicture() throws SeeGalleryException {
 		
 		IseeGalleryService seeGalleryService;
 		try {

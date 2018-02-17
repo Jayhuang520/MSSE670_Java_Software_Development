@@ -17,7 +17,7 @@ public class seeGalleryServiceImpl implements IseeGalleryService{
 	* For now, just output a boolean for a place holder.
 	* TODO: figure out how to output image.
 	*/
-	public boolean RetrievePicture(ArrayList<Room> availableRoomList) {
+	public boolean RetrievePicture(ArrayList<Room> availableRoomList) throws SeeGalleryException{
 		System.out.println("Entering method seeGallerySerivceImpl:"
 				+ "Customer will be able to view pictures of the"
 				+ " hotel room!!!");
