@@ -33,8 +33,8 @@ public class seeGalleryServiceImpl implements ISeeGalleryService{
 		ObjectOutputStream oout = null;
 		boolean successWrite = false;
 		
-		System.out.println("Entering method seeGallerySerivceImpl:"
-				+ " Customer will be able to retrieve room based on the"
+		System.out.println("Entering method seeGallerySerivceImpl:\n"
+				+ " Customer will be able to retrieve room based on the\n"
 				+ "city");
 		
 		try {
