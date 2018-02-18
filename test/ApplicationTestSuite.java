@@ -2,9 +2,9 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
-import com.HuangsHotelReservation.model.business.AllBusinessTests;
-import com.HuangsHotelReservation.model.services.AllServiceTests;
-import com.HuangsHotelReservation.model.domain.AllDomainTests;
+import com.huangshotelreservation.model.business.AllBusinessTests;
+import com.huangshotelreservation.model.domain.AllDomainTests;
+import com.huangshotelreservation.model.services.AllServiceTests;
 
 @RunWith(Suite.class)
 @SuiteClasses({AllBusinessTests.class,
