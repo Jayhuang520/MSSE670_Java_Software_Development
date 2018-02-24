@@ -3,7 +3,7 @@ package com.huangshotelreservation.model.business.factory;
 import com.huangshotelreservation.model.business.exception.ServiceLoadException;
 import com.huangshotelreservation.model.services.factory.ServiceFactory;
 import com.huangshotelreservation.model.services.seegalleryservice.ISeeGalleryService;
-import com.huangshotelreservation.model.services.seegalleryservice.seeGalleryServiceImpl;
+import com.huangshotelreservation.model.services.seegalleryservice.SeeGalleryServiceImpl;
 
 import junit.framework.TestCase;
 
@@ -24,7 +24,7 @@ public class ServiceFactoryTest extends TestCase{
 		try {
 			seeGalleryService = (ISeeGalleryService)serviceFactory.getService(
 					ISeeGalleryService.NAME);
-			assertTrue(seeGalleryService instanceof seeGalleryServiceImpl);		}catch(ServiceLoadException sle) {
+			assertTrue(seeGalleryService instanceof SeeGalleryServiceImpl);		}catch(ServiceLoadException sle) {
 			sle.printStackTrace();
 			fail("ServiceLoadException");
 		}

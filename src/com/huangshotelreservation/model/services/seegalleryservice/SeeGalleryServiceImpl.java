@@ -11,7 +11,7 @@ import com.huangshotelreservation.model.domain.Room;
 import com.huangshotelreservation.model.services.exception.SeeGalleryException;
 
 
-public class seeGalleryServiceImpl implements ISeeGalleryService{
+public class SeeGalleryServiceImpl implements ISeeGalleryService{
 	
 	/*This method will output the image to the presentation layer
 	* For now, just output a boolean for a place holder.
@@ -43,9 +43,6 @@ public class seeGalleryServiceImpl implements ISeeGalleryService{
 			 * based on the city
 			 */
 			
-			/*input = new ObjectInputStream(new FileInputStream(
-					"")); 
-			*/
 			AvailableRoom availableRoomList = new AvailableRoom(1000.0f,true);
 			availableRoomList.addRoom(Room.DOUBLE);
 			availableRoomList.addRoom(Room.SINGLE);
