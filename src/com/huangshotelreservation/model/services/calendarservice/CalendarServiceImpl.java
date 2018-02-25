@@ -8,7 +8,7 @@ import com.huangshotelreservation.model.services.exception.CalendarException;
 
 /**
  * 
- * @author Jay Huang
+ * @author Zhijie Huang
  *
  */
 public class CalendarServiceImpl implements ICalendarService{

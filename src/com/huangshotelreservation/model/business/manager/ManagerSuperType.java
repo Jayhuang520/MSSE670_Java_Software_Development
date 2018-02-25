@@ -7,6 +7,11 @@ import com.huangshotelreservation.model.domain.City;
 import com.huangshotelreservation.model.domain.Room;
 import com.huangshotelreservation.model.services.manager.PropertyManager;
 
+/**
+ * Applying manager for best practice.
+ * @author Zhijie Huang
+ *
+ */
 public abstract class ManagerSuperType {
 
 	/**
@@ -42,6 +47,10 @@ public abstract class ManagerSuperType {
 	public abstract boolean performAction(String commandString,
 			ArrayList<Room> availableRoomList,City city,Room room);
 
+	/**
+	 * Loads the property file into memory.
+	 * @throws PropertyFileNotFoundException
+	 */
 	public static void loadProperties() throws PropertyFileNotFoundException{
 		String propertyFileLocation = System.getProperty("propLocation");
 		if(propertyFileLocation != null) {

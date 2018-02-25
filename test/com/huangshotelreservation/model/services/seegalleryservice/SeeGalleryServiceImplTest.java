@@ -1,4 +1,4 @@
-package com.huangshotelreservation.model.service.seeGalleryService;
+package com.huangshotelreservation.model.services.seegalleryservice;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ import com.huangshotelreservation.model.services.seegalleryservice.ISeeGallerySe
 
 import junit.framework.TestCase;
 
-public class seeGalleryServiceImplTest extends TestCase{
+public class SeeGalleryServiceImplTest extends TestCase{
 
 	private ServiceFactory serviceFactory;
 	private ArrayList<Room> availableRoom = null;

@@ -27,5 +27,5 @@ public interface ISeeGalleryService extends IService{
 	 * Declaration of RetreiveRoom
 	 */
 	public boolean retrieveRoom(City city) 
-			throws IOException, SeeGalleryException;
+			throws SeeGalleryException;
 }

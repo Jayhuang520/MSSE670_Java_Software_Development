@@ -7,6 +7,11 @@ import com.huangshotelreservation.view.mainjframe.MainJFrameController;
 
 public class ViewDriver {
 	
+	//Instruction to run the Driver:
+	//The property file location is in:MSSE670_Java_Software_Development\config\application.properties
+	//The property file has to be passed in as an argument in order to successsfully lauch the seegalleryjframe
+	//Example location:-DpropLocation=D:\Git_Repository\MSSE670_Java_Software_Development\config\application.properties
+	
 	public ViewDriver()
 	{
 		try {

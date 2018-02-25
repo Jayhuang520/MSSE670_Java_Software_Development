@@ -15,7 +15,10 @@ public class MainJFrameController implements ActionListener{
 	public MainJFrameController() {
 	}
 	
-	
+	/**
+	 * Copy constructor
+	 * @param mainJFrame
+	 */
 	public MainJFrameController(MainJFrame mainJFrame) {
 		this.mainJFrame = mainJFrame;
 		mainJFrame.getFileMenuItem().addActionListener(this);
@@ -28,10 +31,13 @@ public class MainJFrameController implements ActionListener{
 		mainJFrame.setVisible(true);
 	}
 
+	/**
+	 * @See java.awt.event.ActionListener for details.
+	 */
 	  public void actionPerformed(ActionEvent event) 
 	  {
 
-	    System.out.println ("Inside ItineraryJFrameController::actionPerformed");
+	    System.out.println ("Inside MainJFrameController::actionPerformed");
 	    
 	    if (event.getSource().equals(mainJFrame.getFileMenuItem()))
 	      menuFileOpen_actionPerformed(event);
@@ -43,6 +49,11 @@ public class MainJFrameController implements ActionListener{
 	      getSeeGallery_actionPerformed(event);
 	  }
 
+	/**
+	 * Process to reserve room.
+	 * This is not implemented yet.
+	 * @param event
+	 */
 	private void getReserveRoom_actionPerformed(ActionEvent event) {
 		  System.out.println("Inside MainJFrameController");
 		  MessageDialog dlg = new MessageDialog( "Reserve Room", "Not Implemented Yet!");    
@@ -53,12 +64,21 @@ public class MainJFrameController implements ActionListener{
 	}
 
 
+	/**
+	 * Process to see the gallery of the room type entered.
+	 * @param event
+	 */
 	private void getSeeGallery_actionPerformed(ActionEvent event) {
 		// TODO Auto-generated method stub
 		SeeGalleryJFrame seeGalleryJFrame = new SeeGalleryJFrame();
 	}
 
 
+	/**
+	 * processes File Menu | Data | Open from File action
+	 * TO-DO: Not implemented.
+	 * @param actionEvent
+	 */
 	void menuFileOpen_actionPerformed(ActionEvent actionEvent) 
 	  {
 	   /*
@@ -72,4 +92,20 @@ public class MainJFrameController implements ActionListener{
 
 	      return;  
 	  } //end of the menuFileOpen_actionPerformed
+	
+	 /**
+	   * Processes File Menu | Data | Open from Database menu click action
+	   * TO-DO: not implemented.
+	   * @param actionEvent ActionEvent
+	   */
+	  void menuReadDB_actionPerformed (ActionEvent actionEvent) 
+	  {
+	    MessageDialog dlg = new MessageDialog( "File Open", " Read comments in callback code");    
+	    Utils.centerWindow(dlg);
+	    dlg.setModal(true);
+	    dlg.show();
+
+	      return;  
+	  } //end menuReadDB_actionPerformed
+
 }

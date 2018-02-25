@@ -1,4 +1,4 @@
-package com.huangshotelreservation.model.service.calendarservice;
+package com.huangshotelreservation.model.services.calendarservice;
 
 import org.junit.Test;
 

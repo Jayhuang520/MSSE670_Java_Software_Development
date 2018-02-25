@@ -8,6 +8,13 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 
+/**
+ * This is a messageDialog.java
+ * This is inside the com.huangshotelreservation.view package.
+ * @author Zhijie Huang
+ *
+ */
+
 public class MessageDialog extends JDialog implements ActionListener{
 
 	/**

@@ -2,7 +2,7 @@ package com.huangshotelreservation.model.services;
 
 /**
  * 
- * @author Jay Huang
+ * @author Zhijie Huang
  * Marker interface.
  * This allows classes in all tiers above to deal with just
  * an interface.

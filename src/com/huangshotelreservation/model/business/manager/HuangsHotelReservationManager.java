@@ -58,6 +58,8 @@ public class HuangsHotelReservationManager extends ManagerSuperType{
 			action = seeGalleryService(ISeeGalleryService.NAME,availableRoomList);
 			
 		}else if(commandString.equals("CalendarService")) {
+			//TO-DO: This is the second priority case, this is a 
+			//place holder for now.
 			//action = CalendarService(ICalendarService.NAME,city,room);
 		}
 		return action;
@@ -123,22 +125,4 @@ public class HuangsHotelReservationManager extends ManagerSuperType{
 		
 	}
 	
-	public static void main(String[] args) throws Exception, CalendarException  {
-		HuangsHotelReservationManager huangsHotelReservationManager = HuangsHotelReservationManager
-				.getInstance();
-		ArrayList<Room> availableRoom = null;
-		availableRoom = new ArrayList<Room>(2);
-		availableRoom.add(Room.DOUBLE);
-		availableRoom.add(Room.KING);
-		
-		boolean seeGallery = huangsHotelReservationManager.performAction("seeGalleryService", availableRoom, City.DENVER, Room.DOUBLE);
-		//This is the compressed version of logical statement in java
-		//If seeGallery is true, output the first string,
-		//else output the second string.
-		String message = seeGallery ? "HuangsHotelReservationManager::main"
-				+ "---- Successfully output image to customer" : "HuangsHotelReservationManager"
-						+ "::Main ---- Failed to output image to customer!";
-		System.out.println(message);
-		
-	}//End main
 }//End class HuangsHotelReservationManager

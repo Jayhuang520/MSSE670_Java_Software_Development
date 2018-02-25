@@ -53,6 +53,11 @@ public class PropertyManager
 		}//End finally
 	}//End loadProperties()
 	
+	/**
+	 * This methods returns the value for the passed key
+	 * @param key
+	 * @return
+	 */
 	static public String getPropertyValue(String key)
 	{
 		return properties.getProperty(key);

@@ -127,7 +127,7 @@ public class MainJFrame extends javax.swing.JFrame{
 		jLabelRoom.setBounds(100, 160, 100, 25);
 		
 		jTextFieldRoom.setFont(new java.awt.Font("Comic Sans MS", 0, 11));
-		jTextFieldRoom.setText("Double");
+		jTextFieldRoom.setText("Queen");
 		jPanel1.add(jTextFieldRoom);
 		jTextFieldRoom.setBounds(210, 160, 90, 22);
 

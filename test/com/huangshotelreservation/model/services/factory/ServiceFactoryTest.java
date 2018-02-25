@@ -1,4 +1,4 @@
-package com.huangshotelreservation.model.service.factory;
+package com.huangshotelreservation.model.services.factory;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
