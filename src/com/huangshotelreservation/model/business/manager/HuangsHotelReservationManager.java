@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.huangshotelreservation.model.business.exception.ServiceLoadException;
 import com.huangshotelreservation.model.domain.City;
+import com.huangshotelreservation.model.domain.ReserveRoom;
 import com.huangshotelreservation.model.domain.Room;
 import com.huangshotelreservation.model.services.calendarservice.ICalendarService;
 import com.huangshotelreservation.model.services.exception.CalendarException;
@@ -50,17 +51,19 @@ public class HuangsHotelReservationManager extends ManagerSuperType{
 	 * @param commandString
 	 * @param availableRoomList
 	 * @return 
+	 * @throws CalendarException 
 	 */
+	
 	public boolean performAction(String commandString,
-			ArrayList<Room> availableRoomList,City city,Room room){
+			ArrayList<Room> availableRoomList,City city,Room room,ReserveRoom reserveRoom) {
 		boolean action = false;
 		if(commandString.equals("seeGalleryService")) {
+			System.out.println("Perform " + commandString);
 			action = seeGalleryService(ISeeGalleryService.NAME,availableRoomList);
 			
-		}else if(commandString.equals("CalendarService")) {
-			//TO-DO: This is the second priority case, this is a 
-			//place holder for now.
-			//action = CalendarService(ICalendarService.NAME,city,room);
+		}else if(commandString.equals("calendarService")) {
+			System.out.println("Perform " + commandString);
+			action = CalendarService(ICalendarService.NAME,availableRoomList,reserveRoom);
 		}
 		return action;
 	}
@@ -104,7 +107,7 @@ public class HuangsHotelReservationManager extends ManagerSuperType{
 	 * @return
 	 * @throws CalendarException
 	 */
-	public boolean CalendarService(String commandString,City city,Room room) throws CalendarException {
+	public boolean CalendarService(String commandString,ArrayList<Room> availableRoomList,ReserveRoom reserveRoom){
 		boolean calendarService = false;
 		
 		ServiceFactory serviceFactory = ServiceFactory.getInstance();
@@ -113,13 +116,13 @@ public class HuangsHotelReservationManager extends ManagerSuperType{
 		try {
 			iCalendarService = (ICalendarService) serviceFactory
 					.getService(commandString);
-			calendarService = iCalendarService.RetrieveAvaliableRoom(city, room);
+			calendarService = iCalendarService.reserveRoomService(availableRoomList, reserveRoom);
+			calendarService = true;
 		}catch(ServiceLoadException sle) {
 			System.out.println("HuangsHotelManager RetrieveAvailableRoom failed.");
 		}catch(CalendarException ce) {
 			System.out.println("HuangsHotelManager RetrieveAvailableRoom failed.");
 		}
-		
 		
 		return calendarService;
 		

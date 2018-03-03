@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.huangshotelreservation.model.business.exception.PropertyFileNotFoundException;
 import com.huangshotelreservation.model.domain.City;
+import com.huangshotelreservation.model.domain.ReserveRoom;
 import com.huangshotelreservation.model.domain.Room;
 import com.huangshotelreservation.model.services.manager.PropertyManager;
 
@@ -45,7 +46,7 @@ public abstract class ManagerSuperType {
 	 */
 	
 	public abstract boolean performAction(String commandString,
-			ArrayList<Room> availableRoomList,City city,Room room);
+			ArrayList<Room> availableRoomList,City city,Room room,ReserveRoom reserveRoom);
 
 	/**
 	 * Loads the property file into memory.

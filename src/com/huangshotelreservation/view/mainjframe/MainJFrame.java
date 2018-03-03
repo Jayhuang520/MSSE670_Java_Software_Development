@@ -1,6 +1,7 @@
 package com.huangshotelreservation.view.mainjframe;
 
 import javax.swing.JButton;
+import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -17,7 +18,7 @@ import javax.swing.JTextField;
  *
  */
 
-public class MainJFrame extends javax.swing.JFrame{
+public class MainJFrame extends JInternalFrame{
 
 	/**
 	 * 
@@ -68,8 +69,6 @@ public class MainJFrame extends javax.swing.JFrame{
 		jLabelComplementaryService = new javax.swing.JLabel();
 		jLabelFreeService = new javax.swing.JLabel();
 
-		jButtonReserveRoom = new javax.swing.JButton();
-		jButtonSeeGallery = new javax.swing.JButton();
 
 		jMenuBar.setOpaque(true);
 
@@ -141,21 +140,6 @@ public class MainJFrame extends javax.swing.JFrame{
 		jPanel1.add(jLabelFreeService);
 		jLabelFreeService.setBounds(100, 240, 600, 25);
 
-		jButtonReserveRoom.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-		jButtonReserveRoom.setLabel("Reserve Room");
-		jButtonReserveRoom.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				jButtonGetjButtonReserveRoomActionPerformed(evt);
-			}
-		});
-
-		jPanel1.add(jButtonReserveRoom);
-		jButtonReserveRoom.setBounds(75, 500, 200, 25);
-
-		jButtonSeeGallery.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-		jButtonSeeGallery.setText("See Gallery");
-		jPanel1.add(jButtonSeeGallery);
-		jButtonSeeGallery.setBounds(325, 500, 200, 25);
 
 		getContentPane().add(jPanel1);
 		jPanel1.setBounds(0, 0, 600, 600);

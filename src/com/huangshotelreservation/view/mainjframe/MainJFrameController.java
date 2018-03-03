@@ -23,8 +23,6 @@ public class MainJFrameController implements ActionListener{
 		this.mainJFrame = mainJFrame;
 		mainJFrame.getFileMenuItem().addActionListener(this);
 		mainJFrame.getDatabaseMenuItem().addActionListener(this);
-		mainJFrame.getGetReserveRoomButton().addActionListener(this);
-		mainJFrame.getSeeGalleryButton().addActionListener(this);
 		
 		//Center the frame
 		Utils.centerWindow(mainJFrame);

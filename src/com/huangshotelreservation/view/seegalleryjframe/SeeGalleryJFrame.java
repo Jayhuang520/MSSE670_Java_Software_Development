@@ -3,6 +3,7 @@ package com.huangshotelreservation.view.seegalleryjframe;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
+import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -21,7 +22,7 @@ import com.huangshotelreservation.model.domain.Room;
  * method in Swing. It is hard to incorporate it into a week.
  *
  */
-public class SeeGalleryJFrame extends javax.swing.JFrame{
+public class SeeGalleryJFrame extends JInternalFrame{
 
 	/**
 	 * 
@@ -63,7 +64,7 @@ public class SeeGalleryJFrame extends javax.swing.JFrame{
 		initComponents();
 		
 		seeGalleryJFrameController = new SeeGalleryJFrameController(this);
-		
+		pack();
 		this.setSize(600,650);
 		this.setVisible(true);
 	}
@@ -112,7 +113,7 @@ public class SeeGalleryJFrame extends javax.swing.JFrame{
 		jMenuBar.add(jFileMenu);
 
 		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-		setTitle("Huangs Hotel Reservation System");
+		setTitle("See Gallery Service");
 		setFont(new java.awt.Font("Comic Sans MS", 0, 10)); 
 		getContentPane().setLayout(null);
 

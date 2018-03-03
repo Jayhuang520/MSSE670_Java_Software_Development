@@ -37,12 +37,12 @@ public class MessageDialog extends JDialog implements ActionListener{
 	 * Initialize component
 	 */
 	private void jInit() {
-		jlabel.setBounds(new Rectangle(100, 15, 197, 40));
+		jlabel.setBounds(new Rectangle(100, 15, 400, 40));
 		okbutton.setBounds(new Rectangle(114, 70, 68, 23));
 		this.getContentPane().add(jlabel);
 		this.getContentPane().add(okbutton);
 		getContentPane().setLayout(null);
-		setSize(300,200);
+		setSize(500,200);
 	}
 
 	/**

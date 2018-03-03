@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 import com.huangshotelreservation.model.business.manager.HuangsHotelReservationManager;
 import com.huangshotelreservation.model.domain.City;
+import com.huangshotelreservation.model.domain.ReserveRoom;
 import com.huangshotelreservation.model.domain.Room;
 import com.huangshotelreservation.view.MessageDialog;
 import com.huangshotelreservation.view.Utils;
@@ -67,7 +68,9 @@ public class SeeGalleryJFrameController
 		HuangsHotelReservationManager huangsHotelReservationManager = HuangsHotelReservationManager.getInstance();
 		
 		if(huangsHotelReservationManager != null) {
-			boolean action = huangsHotelReservationManager.performAction("seeGalleryService", availableRoom, City.DENVER,Room.QUEEN );
+			String commandString;
+			ReserveRoom reserveRoom = new ReserveRoom();
+			boolean action = huangsHotelReservationManager.performAction("seeGalleryService", availableRoom, City.DENVER,Room.QUEEN,reserveRoom);
 			if(action) {
 				MessageDialog mdg = new MessageDialog("See Gallery","Successfully see Gallery");
 				Utils.centerWindow(mdg);

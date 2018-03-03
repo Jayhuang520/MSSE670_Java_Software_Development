@@ -22,10 +22,13 @@ public class SeeGalleryServiceImpl implements ISeeGalleryService{
 				+ "Customer will be able to view pictures of the"
 				+ " hotel room!!!");
 		if(availableRoomList.size()>0) {
+			for(Room room : availableRoomList) {
+				System.out.println(room);
+			}
 			return true;
 		}else
 			return false;
-		
+	
 	}
 	
 	public boolean retrieveRoom(City city) throws SeeGalleryException {

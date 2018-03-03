@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.huangshotelreservation.model.business.manager.HuangsHotelReservationManager;
 import com.huangshotelreservation.model.domain.City;
+import com.huangshotelreservation.model.domain.ReserveRoom;
 import com.huangshotelreservation.model.domain.Room;
 import com.huangshotelreservation.model.services.exception.CalendarException;
 import com.huangshotelreservation.model.services.exception.SeeGalleryException;
@@ -21,6 +22,7 @@ public class HuangsHotelReservationManagerTest extends TestCase{
 
 	private HuangsHotelReservationManager huangsHotelReservationManager;
 	ArrayList<Room> availableRoom = null;
+	private ReserveRoom reserveRoom;
 	
 	protected void setUp() throws Exception{
 		super.setUp();
@@ -31,7 +33,7 @@ public class HuangsHotelReservationManagerTest extends TestCase{
 		availableRoom.add(Room.DOUBLE);
 		availableRoom.add(Room.KING);
 		
-		
+		reserveRoom = new ReserveRoom();
 	}
 	
 	/**
@@ -41,8 +43,9 @@ public class HuangsHotelReservationManagerTest extends TestCase{
 	 */
 	public final void testPerformAcionOnSeeGalleryService() throws SeeGalleryException, CalendarException
 	{
+		
 		boolean action = huangsHotelReservationManager.performAction("seeGalleryService", 
-				availableRoom, City.DENVER, Room.DOUBLE);
+				availableRoom, City.DENVER, Room.DOUBLE,reserveRoom);
 		assertTrue(action);
 	}
 	
